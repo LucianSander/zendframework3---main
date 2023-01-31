@@ -1,0 +1,16 @@
+<?php
+ 
+?>
+<h1>Lista de pessoas</h1> 
+<table class="table table-stripped">
+    <tr>
+        <th>Nome</tr>
+    </tr>
+<?php
+        foreach($pessoas as $pes) :
+        ?>
+            <tr><td><?=$pes->getNome()?></td></tr>
+        <?php
+        endforeach;
+?>
+</table>
