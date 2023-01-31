@@ -4,12 +4,23 @@
 <h1>Lista de pessoas</h1> 
 <table class="table table-stripped">
     <tr>
-        <th>Nome</tr>
+        <th>Código</th>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>Email</th>
+        <th>Situação</th>
     </tr>
 <?php
+
         foreach($pessoas as $pes) :
         ?>
-            <tr><td><?=$pes->getNome()?></td></tr>
+            <tr>
+                <td><?=$pes->getId()?></td>
+                <td><?=$pes->getNome()?></td>
+                <td><?=$pes->getSobrenome()?></td>
+                <td><?=$pes->getEmail()?></td>
+                <td><?=$pes->getSituacao()?></td>
+            </tr>
         <?php
         endforeach;
 ?>
